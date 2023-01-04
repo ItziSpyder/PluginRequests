@@ -1,0 +1,44 @@
+name: ItemEffects
+version: '${project.version}'
+main: me.improperissues.itemeffects.ItemEffects
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Allows items to have another attribute, having potion effects
+website: github.com/ItziSpyder
+commands:
+  description:
+    description: Adds an effect to an item. Use '+' and the name of the effect on all caps to add an effect. Use '->' to skip to the next line. Use '&' as the color code.
+    usage: §7/description §b<string>
+    permission: itemeffects.commands
+    permission-message: §4You do not have access to this!
+    aliases:
+      - setdescription
+      - setlore
+      - lore
+  displayname:
+    description: Sets the display name of an item. Use '&' as the color code.
+    usage: §7/displayname §b<string>
+    permission: itemeffects.commands
+    permission-message: §4You do not have access to this!
+    aliases:
+      - setdisplayname
+      - rename
+      - name
+      - setname
+  effectlist:
+    description: Lists all the possible effects
+    usage: §7/effectlist
+    permission: itemeffects.commands
+    permission-message: §4You do not have access to this!
+    aliases:
+      - alleffects
+      - listeffects
+  colorcodes:
+    description: Lists all the possible color codes
+    usage: §7/colorcodes
+    permission: itemeffects.commands
+    permission-message: §4You do not have access to this!
+    aliases:
+      - allcolors
+      - listcolors
+      - colorlist
