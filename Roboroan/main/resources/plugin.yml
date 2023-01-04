@@ -1,0 +1,40 @@
+name: Roboroan
+version: 1.0
+main: me.improperissues.roboroan.Roboroan
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Roboroan.minehut.gg
+website: github.com/itzispyder
+commands:
+  mute:
+    description: Mutes a player
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/mute <player>
+    permission: roboroan.mute
+  unmute:
+    description: Unmutes a player
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/umute <player>
+    permission: roboroan.mute
+  freeze:
+    description: Freezes a player
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/freeze <player>
+    permission: roboroan.mute
+  unfreeze:
+    description: Unfreezes a player
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/unfreeze <player>
+    permission: roboroan.mute
+  invsee:
+    description: Opens the inventory of a player
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/invsee <player>
+    permission: roboroan.invsee
+    aliases:
+      - inventorysee
+      - openinventory
+      - openinv
+  broadcast:
+    description: Broadcasts a message to the entire server
+    usage: §7[§6Server§7] §7[§4Error§7] §cCorrect usage §8>> §7/broadcast <message>
+    permission: roboroan.broadcast
+    aliases:
+      - bm
+      - announcement
+      - announce
