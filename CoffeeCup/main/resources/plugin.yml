@@ -1,0 +1,37 @@
+name: CoffeeCup
+version: '${project.version}'
+main: me.improperissues.coffeecup.CoffeeCup
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Clearlag features | Small plugin | Easy to use
+website: github.com/ItziSpyder
+commands:
+  spawncontrol:
+    description: Controls entity type spawning
+    usage: §7/spawncontrol §b<entitytype> §e<boolean>
+    permission: coffee.commands
+    permission-message: §4You do not have access to this!
+  clearall:
+    description: Clears entities
+    usage: §7/clearall §b<entitytype>
+    permission: coffee.commands
+    permission-message: §4You do not have access to this!
+  clearchat:
+    description: Clears chat
+    usage: §7/clearchat
+    permission: coffee.commands
+    permission-message: §4You do not have access to this!
+  clearlag:
+    description: Clears lag (a timer)
+    usage: §7/clearlag §8[§6resume§7|§6setInterval§7|§6setClearType§8] §b<value>
+    permission: coffee.commands
+    permission-message: §4You do not have access to this!
+  pl:
+    description: Plugin management
+    usage: §7/pl §b<action>
+    permission: coffee.commands
+    permission-message: §4You do not have access to this!
+    aliases:
+      - pl
+      - plugin
+      - plugins
