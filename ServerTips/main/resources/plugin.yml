@@ -1,0 +1,13 @@
+name: ServerTips
+version: '${project.version}'
+main: me.improperissues.servertips.ServerTips
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Adds timed broadcasted tips for your server! As well as /rules or /tips!
+website: github.com/ItziSpyder
+commands:
+  tip:
+    description: Creates a tip for the server
+    usage: §7[§aTip§7] §cCorrect usage >> §7/tip <action> <tip>
+    permission: servertips.tip
+    permission-message: §7[§aTip§7] §4You do not have access to this!

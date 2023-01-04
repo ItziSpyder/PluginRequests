@@ -1,0 +1,8 @@
+config:
+  plugin:
+    prefix: '§7[§aTip§7] §'
+  general:
+    randomize: true
+    paused: false
+    min_delay: 60
+    max_delay: 180
