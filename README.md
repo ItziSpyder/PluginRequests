@@ -1,8 +1,7 @@
 # PluginRequests
 Open source for all plugins requests that I've received.
 ----------------------------------------------------------------
- - AyoCoolItems - Remake of @Roboroan's command block items (Creative)
-------------------------
+ - AyoCoolItems - Remake of @Roboroan's command block items *(Creative)*
  - CoffeeCup - A Lightweight clearlag plugin (All)
  - ExplosionsControl - Control and manage explosion settings for each world (All)
  - FireArt - A Giant Paintbrush that lets you paint with various blocks! (Creative)
