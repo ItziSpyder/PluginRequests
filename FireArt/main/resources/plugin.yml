@@ -1,0 +1,15 @@
+name: FireArt
+version: '${project.version}'
+main: me.improperissues.fireart.FireArt
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: A Paint Brush, Literally!
+website: github.com/ItziSpyder
+commands:
+  givebrush:
+    description: Gives the paint brush that's used for painting areas of blocks!
+    usage: /givebrush
+    permission: fireart.givebrush
+  paintselector:
+    description: Opens the block selection menu for the paint brush
+    usage: /paintselector
