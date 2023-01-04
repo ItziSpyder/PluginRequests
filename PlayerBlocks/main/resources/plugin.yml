@@ -1,0 +1,15 @@
+name: PlayerBlocks
+version: '${project.version}'
+main: me.improperissues.playerblocks.PlayerBlocks
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Select regions that'll only allow for players to break blocks they've placed!
+website: github.com/itzispyder
+commands:
+  playerblocks:
+    description: Manages regions for the server
+    usage: '§fPlayerBlocks: §cCorrect usage: §7/playerblocks [ create | delete | teleport | clear | togglelog | givewand ] <region>'
+    permission: playerblocks.commands
+    aliases:
+      - pb
+      - pblocks
