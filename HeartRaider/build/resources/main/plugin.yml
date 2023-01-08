@@ -1,0 +1,12 @@
+name: HeartRaider
+version: '1.0-BETA'
+main: me.improperissues.heartraider.HeartRaider
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Custom Items and Abilities for 0Tomer
+website: github.com/ItziSpyder
+commands:
+  giveitem:
+    description: Gives custom items from this plugin
+    usage: /giveitem <item> <player>
+    permission: heartraider.commands.giveitem
