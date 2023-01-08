@@ -26,13 +26,17 @@ public class OnClick implements Listener {
             switch (e.getAction()) {
                 case RIGHT_CLICK_AIR:
                 case RIGHT_CLICK_BLOCK:
-                    if (lore.contains(ChatColor.DARK_GRAY + "heartraider:fireballwand")) FireballWand.function(p);
-                    if (lore.contains(ChatColor.DARK_GRAY + "heartraider:witherblade")) WitherBlade.function(p);
+                    if (lore.contains(ChatColor.DARK_GRAY + "heartraider:fireballwand")) {
+                        e.setCancelled(true);
+                        FireballWand.function(p);
+                    }
+                    if (lore.contains(ChatColor.DARK_GRAY + "heartraider:witherblade")) {
+                        e.setCancelled(true);
+                        WitherBlade.function(p);
+                    }
                     break;
             }
-        } catch (Exception exception) {
-            throw new RuntimeException(exception);
-        }
+        } catch (Exception exception) {}
     }
 
 
