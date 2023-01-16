@@ -1,0 +1,40 @@
+#
+#
+# This plugin was specifically made for Ogredupe.minehut.gg
+# Author: ImproperIssues
+# Owner: TheTelly
+# Date Created: 1/15/2023
+#
+# This plugin is in BETA and more features will be added in the future.
+#
+#
+config:
+  plugin:
+    prefix: '§7[§3Ogre§5Dupe§7] §r'
+    specific-commands: false
+    op-bypass-plugin-restrictions: false
+  chat:
+    anti-spam: true
+    chat-cooldown: 1000
+    anti-swear: true
+    anti-swear-op-broadcast: true
+    blacklist:
+      - 'example-word1'
+      - 'example-word2'
+      - 'example-word3'
+    blacklist-override:
+      - 'example-word1'
+      - 'example-word2'
+      - 'example-word3'
+    anti-command-spam: true
+    command-cooldown: 1000
+    command-cooldown-list:
+      - '/me'
+      - '/say'
+      - '/tp'
+  messages:
+    swear: "§cPlease do not swear in chat!"
+    spam: "§cPlease wait a moment before doing this again!"
+    repeat: "§cPlease do not repeat the same message!"
+    plugin-specific: "§cPlugin-specific commands aren't allowed on this server!"
+

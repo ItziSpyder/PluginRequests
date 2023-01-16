@@ -1,0 +1,7 @@
+name: OgredupeAlias
+version: '1.0-SNAPSHOT'
+main: me.improper.ogredupealias.OgredupeAlias
+api-version: 1.17
+authors: [ ImproperIssues, TheTelly ]
+description: OgreDupe.minehut.gg! Visit orgestupe.tebex.io
+website: https://github.com/ItziSpyder/PluginRequests
