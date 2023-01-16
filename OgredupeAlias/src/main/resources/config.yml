@@ -17,7 +17,7 @@ config:
     anti-spam: true
     chat-cooldown: 1000
     anti-swear: true
-    anti-swear-op-broadcast: true
+    anti-swear-notify-permission: 'ogredupealias.chat.see'
     blacklist:
       - 'example-word1'
       - 'example-word2'

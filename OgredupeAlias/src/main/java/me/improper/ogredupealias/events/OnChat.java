@@ -66,7 +66,7 @@ public class OnChat implements Listener {
                     TextComponent broadcast = new TextComponent(OgredupeAlias.STARTER + ChatColor.GRAY + "[" + ChatColor.RED + "Anti-Swear"
                             + ChatColor.GRAY + "] " + ChatColor.GREEN + p.getName() + ChatColor.DARK_GRAY + " >> " + ChatColor.YELLOW + msg);
                     broadcast.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,TextComponent.fromLegacyText(ChatColor.RED + "Flagged: " + ChatColor.GRAY + blacklisted)));
-                    if (Config.getAntiSwearBroadcast()) for (Player online : Bukkit.getOnlinePlayers()) if (online.isOp()) online.spigot().sendMessage(broadcast);
+                    for (Player online : Bukkit.getOnlinePlayers()) if (online.hasPermission(Config.getAntiSwearNotifyPermission())) online.spigot().sendMessage(broadcast);
                     break;
                 }
             }

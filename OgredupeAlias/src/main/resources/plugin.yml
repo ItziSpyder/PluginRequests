@@ -5,3 +5,7 @@ api-version: 1.17
 authors: [ ImproperIssues, TheTelly ]
 description: OgreDupe.minehut.gg! Visit orgestupe.tebex.io
 website: https://github.com/ItziSpyder/PluginRequests
+permissions:
+  ogredupealias.chat.see:
+    description: Be able to receive chat messages broadcasted by Anti-Swear
+    default: op

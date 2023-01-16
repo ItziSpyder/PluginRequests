@@ -75,12 +75,13 @@ public class Config {
     }
 
     /**
-     * Checks if anti-swear messages should be broadcasted in chat.
+     * Returns the permission required to be able to see
+     * anti-swear chat messages.
      *
-     * @return Whether anti-swear should broadcast messages
+     * @return The permission required as a string
      */
-    public static boolean getAntiSwearBroadcast() {
-        return CONFIG.getBoolean("config.chat.anti-swear-op-broadcast");
+    public static String getAntiSwearNotifyPermission() {
+        return CONFIG.getString("config.chat.anti-swear-notify-permission");
     }
 
     /**
