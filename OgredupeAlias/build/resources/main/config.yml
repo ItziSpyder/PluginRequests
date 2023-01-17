@@ -37,4 +37,14 @@ config:
     spam: "§cPlease wait a moment before doing this again!"
     repeat: "§cPlease do not repeat the same message!"
     plugin-specific: "§cPlugin-specific commands aren't allowed on this server!"
-
+    disabled: "§cThe chat is disabled at the moment!"
+  socialspy:
+    commandspy-blacklist:
+      - '/dupe'
+      - '/msg'
+      - '/w'
+      - '/private-message'
+      - '/pm'
+      - '/message'
+      - 'whisper'
+      - '/tell'
