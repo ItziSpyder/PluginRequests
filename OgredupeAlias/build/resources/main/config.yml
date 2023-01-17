@@ -38,6 +38,9 @@ config:
     repeat: "§cPlease do not repeat the same message!"
     plugin-specific: "§cPlugin-specific commands aren't allowed on this server!"
     disabled: "§cThe chat is disabled at the moment!"
+    player-firstjoin: '§e%player% joined for their first time' #Tip: Use %player% for player's name
+    player-join: '§e%player% joined the game' #Tip: Use %player% for player's name
+    player-quit: '§e%player% left the game' #Tip: Use %player% for player's name
   socialspy:
     commandspy-blacklist:
       - '/dupe'

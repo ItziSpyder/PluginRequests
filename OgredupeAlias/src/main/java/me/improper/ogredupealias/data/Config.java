@@ -151,6 +151,33 @@ public class Config {
         public static String getChatDisabled() {
             return CONFIG.getString("config.messages.disabled");
         }
+
+        /**
+         * Returns the player join message.
+         *
+         * @return The message
+         */
+        public static String getJoinMessage() {
+            return CONFIG.getString("config.messages.player-join");
+        }
+
+        /**
+         * Returns the player first join message.
+         *
+         * @return The message
+         */
+        public static String getFirstJoinMessage() {
+            return CONFIG.getString("config.messages.player-firstjoin");
+        }
+
+        /**
+         * Returns the player quit message.
+         *
+         * @return The message
+         */
+        public static String getQuitMessage() {
+            return CONFIG.getString("config.messages.player-quit");
+        }
     }
 
     public class LISTS {
