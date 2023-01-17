@@ -5,6 +5,7 @@ import me.improper.ogredupealias.commands.Tabs;
 import me.improper.ogredupealias.data.Config;
 import me.improper.ogredupealias.events.OnChat;
 import me.improper.ogredupealias.events.OnCommand;
+import me.improper.ogredupealias.events.OnDamage;
 import me.improper.ogredupealias.events.OnJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -28,6 +29,7 @@ public final class OgredupeAlias extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new OnChat(),this);
         Bukkit.getPluginManager().registerEvents(new OnCommand(),this);
         Bukkit.getPluginManager().registerEvents(new OnJoin(),this);
+        Bukkit.getPluginManager().registerEvents(new OnDamage(),this);
 
         // Commands
         getCommand("mutechat").setExecutor(new Commands());
