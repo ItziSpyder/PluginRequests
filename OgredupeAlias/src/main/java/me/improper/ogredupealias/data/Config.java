@@ -99,6 +99,15 @@ public class Config {
         public static boolean allowChatSpam() {
             return !CONFIG.getBoolean("config.chat.anti-spam");
         }
+
+        /**
+         * Checks if chat unicode is allowed on the server.
+         *
+         * @return Whether unicode are allowed
+         */
+        public static boolean allowUnicode() {
+            return !CONFIG.getBoolean("config.chat.anti-unicode");
+        }
     }
 
     public class MESSAGES {
@@ -177,6 +186,15 @@ public class Config {
          */
         public static String getQuitMessage() {
             return CONFIG.getString("config.messages.player-quit");
+        }
+
+        /**
+         * Returns the unicode message.
+         *
+         * @return The message
+         */
+        public static String getUnicodeMessage() {
+            return CONFIG.getString("config.messages.unicode");
         }
     }
 

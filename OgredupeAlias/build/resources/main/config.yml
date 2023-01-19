@@ -17,6 +17,7 @@ config:
     anti-spam: true
     chat-cooldown: 1000
     anti-swear: true
+    anti-unicode: true
     anti-swear-notify-permission: 'ogredupealias.chat.see'
     blacklist:
       - 'example-word1'
@@ -38,6 +39,7 @@ config:
     repeat: "§cPlease do not repeat the same message!"
     plugin-specific: "§cPlugin-specific commands aren't allowed on this server!"
     disabled: "§cThe chat is disabled at the moment!"
+    unicode: "§cYour message contains characters that are not supported on this server!"
     player-firstjoin: '§e%player% joined for their first time' #Tip: Use %player% for player's name
     player-join: '§e%player% joined the game' #Tip: Use %player% for player's name
     player-quit: '§e%player% left the game' #Tip: Use %player% for player's name

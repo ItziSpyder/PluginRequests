@@ -22,11 +22,21 @@ public class OnChat implements Listener {
     public static boolean ISCHATMUTED = false;
     public static List<String> CHATLISTENER = new ArrayList<>();
 
-
     @EventHandler
     public static void PlayerChatEvent(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
         String msg = e.getMessage();
+
+        // Unicode blocker
+        String unifontBlock = msg.replaceAll("[\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/[0-9]\\:\\;\\<\\=\\>\\?\\@[A-Z]\\[\\]\\^\\_\\'[a-z]\\{\\|\\}\\~\\⌂\\Ç\\ü\\é\\â\\ä\\à\\å\\ç\\ê\\ë\\è\\ï\\î\\ì\\Ä\\Å\\É\\æ\\Æ\\ô\\ö\\ò\\û\\ù\\ÿ\\Ö\\Ü\\ø\\£\\Ø\\×\\ƒ\\á\\í\\ó\\ú\\ñ\\Ñ\\ª\\º\\¿\\®\\¬\\½\\¼\\¡\\«\\»\\§]","");
+        if (!Config.BOOLEANS.allowUnicode() && unifontBlock.trim().length() != 0) {
+            e.setCancelled(true);
+            p.sendMessage(OgredupeAlias.STARTER
+                    + ChatColor.GRAY + "["
+                    + ChatColor.RED + "Unicode Detector"
+                    + ChatColor.GRAY + "] "
+                    + Config.MESSAGES.getUnicodeMessage());
+        }
 
         // Chat disabler
         if (ISCHATMUTED && !p.hasPermission("ogredupealias.chat.bypass")) {
@@ -53,7 +63,10 @@ public class OnChat implements Listener {
         CHAT_COOLDOWN.put(p.getName(),System.currentTimeMillis() + (long) Config.VALUES.getChatCooldown());
 
         // Chat repeat prevention
-        if (!Config.BOOLEANS.allowChatSpam() && LAST_MESSAGE.containsKey(p.getName()) && simplify(LAST_MESSAGE.get(p.getName())).equals(simplify(msg))) {
+        if (!Config.BOOLEANS.allowChatSpam()
+                && LAST_MESSAGE.containsKey(p.getName())
+                && (simplify(LAST_MESSAGE.get(p.getName())).contains(simplify(msg))
+                || simplify(msg).contains(simplify(LAST_MESSAGE.get(p.getName()))))) {
             e.setCancelled(true);
             p.sendMessage(OgredupeAlias.STARTER + Config.MESSAGES.getRepeat());
             return;
@@ -95,7 +108,7 @@ public class OnChat implements Listener {
     private static String simplify(String string) {
         string = string.trim()
                 .toLowerCase()
-                .replaceAll("//.","")
+                .replaceAll("\\.","")
                 .replaceAll(" ","")
                 .replaceAll("_","")
                 .replaceAll("-","");
