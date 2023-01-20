@@ -102,11 +102,16 @@ public class Commands implements CommandExecutor {
                 }
                 case "staffchat" -> {
                     String message = buildArgs(args,0);
+                    if (message.trim().equals("")) {
+                        sender.sendMessage(OgredupeAlias.STARTER + ChatColor.RED + "Please enter a message to send!");
+                        return true;
+                    }
                     for (Player online : Bukkit.getOnlinePlayers()) if (online.hasPermission("ogredupealias.chat.staff")) {
                         online.sendMessage(OgredupeAlias.STARTER
                                 + ChatColor.GRAY + "["
                                 + ChatColor.RED + ChatColor.BOLD + "(!) "
-                                + ChatColor.GREEN + "Staff Chat"
+                                + ChatColor.GREEN + "Staff Chat: "
+                                + ChatColor.YELLOW + sender.getName()
                                 + ChatColor.GRAY + "] "
                                 + ChatColor.GREEN + message);
                     }
