@@ -100,6 +100,18 @@ public class Commands implements CommandExecutor {
                             );
                     return true;
                 }
+                case "staffchat" -> {
+                    String message = buildArgs(args,0);
+                    for (Player online : Bukkit.getOnlinePlayers()) if (online.hasPermission("ogredupealias.chat.staff")) {
+                        online.sendMessage(OgredupeAlias.STARTER
+                                + ChatColor.GRAY + "["
+                                + ChatColor.RED + ChatColor.BOLD + "(!) "
+                                + ChatColor.GREEN + "Staff Chat"
+                                + ChatColor.GRAY + "] "
+                                + ChatColor.GREEN + message);
+                    }
+                    return true;
+                }
             }
         } catch (Exception exception) {
             String message = OgredupeAlias.STARTER

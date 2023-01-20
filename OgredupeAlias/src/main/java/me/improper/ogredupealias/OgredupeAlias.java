@@ -40,6 +40,8 @@ public final class OgredupeAlias extends JavaPlugin {
         getCommand("socialspy").setTabCompleter(new Tabs());
         getCommand("message").setExecutor(new Commands());
         getCommand("message").setTabCompleter(new Tabs());
+        getCommand("staffchat").setExecutor(new Commands());
+        getCommand("staffchat").setTabCompleter(new Tabs());
     }
 
     @Override

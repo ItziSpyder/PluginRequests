@@ -18,7 +18,12 @@ public class Tabs implements TabCompleter {
             case "message" -> {
                 switch (args.length) {
                     case 1 -> list.addAll(ServerUtil.listPlayers());
-                    case 2 -> list.add("MESSAGE");
+                    case 2 -> list.add("[<message>]");
+                }
+            }
+            case "staffchat" -> {
+                switch (args.length) {
+                    case 1 -> list.add("[<message>]");
                 }
             }
         }

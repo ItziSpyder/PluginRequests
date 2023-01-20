@@ -12,6 +12,9 @@ permissions:
   ogredupealias.chat.bypass:
     description: Permission to bypass chat disabler.
     default: op
+  ogredupealias.chat.staff:
+    description: Permission to access staff chat.
+    default: op
 commands:
   commandspy:
     description: "Be able to see players' commands."
@@ -40,3 +43,10 @@ commands:
       - tell
       - w
       - whisper
+  staffchat:
+    description: Send a message to staff chat.
+    usage: /staffchat <message>
+    permission: ogredupealias.chat.staff
+    aliases:
+      - schat
+      - sc
