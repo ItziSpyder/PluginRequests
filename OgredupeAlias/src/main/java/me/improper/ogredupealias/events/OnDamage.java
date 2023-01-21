@@ -1,6 +1,9 @@
 package me.improper.ogredupealias.events;
 
+import me.improper.ogredupealias.OgredupeAlias;
+import me.improper.ogredupealias.data.Config;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.EnderCrystal;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
@@ -9,6 +12,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -32,6 +36,22 @@ public class OnDamage implements Listener {
             else if (victim instanceof EnderCrystal && damager instanceof Player) {
                 DAMAGELOG.put(victim.getUniqueId(),damager.getUniqueId());
             }
+            else if (victim instanceof Player pVictim && damager instanceof Player pDamager) {
+                if (Config.BOOLEANS.allowNakedKill()) return;
+                if (isNewbie(pVictim) && !isNewbie(pDamager)) {
+                    e.setCancelled(true);
+                    pDamager.sendMessage(OgredupeAlias.STARTER + ChatColor.RED + "This player is under-geared!");
+                }
+                else if (!isNewbie(pVictim) && isNewbie(pDamager)) {
+                    e.setCancelled(true);
+                    pDamager.sendMessage(OgredupeAlias.STARTER + ChatColor.RED + "You are under-geared!");
+                }
+            }
         } catch (Exception exception) {}
+    }
+
+    private static boolean isNewbie(Player player) {
+        String contents = Arrays.asList(player.getInventory().getArmorContents()).toString();
+        return !contents.contains("NETHERITE") && !contents.contains("DIAMOND");
     }
 }

@@ -1,6 +1,7 @@
 package me.improper.ogredupealias.events;
 
 import me.improper.ogredupealias.OgredupeAlias;
+import me.improper.ogredupealias.data.ChatLogger;
 import me.improper.ogredupealias.data.Config;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -26,6 +27,9 @@ public class OnChat implements Listener {
     public static void PlayerChatEvent(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
         String msg = e.getMessage();
+
+        // ChatLog
+        // ChatLogger.writeLog(p,msg);
 
         // Unicode blocker
         String unifontBlock = msg.replaceAll("[\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/[0-9]\\:\\;\\<\\=\\>\\?\\@[A-Z]\\[\\]\\^\\_\\'[a-z]\\{\\|\\}\\~\\⌂\\Ç\\ü\\é\\â\\ä\\à\\å\\ç\\ê\\ë\\è\\ï\\î\\ì\\Ä\\Å\\É\\æ\\Æ\\ô\\ö\\ò\\û\\ù\\ÿ\\Ö\\Ü\\ø\\£\\Ø\\×\\ƒ\\á\\í\\ó\\ú\\ñ\\Ñ\\ª\\º\\¿\\®\\¬\\½\\¼\\¡\\«\\»\\§]","");

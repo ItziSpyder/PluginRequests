@@ -13,6 +13,10 @@ config:
     prefix: '§7[§3Ogre§5Dupe§7] §r'
     specific-commands: false
     op-bypass-plugin-restrictions: false
+  custom:
+    sieving: true
+  combat:
+    anti-nakedkill: true
   chat:
     anti-spam: true
     chat-cooldown: 1000

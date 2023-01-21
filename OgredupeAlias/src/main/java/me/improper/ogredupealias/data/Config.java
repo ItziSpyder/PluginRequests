@@ -108,6 +108,24 @@ public class Config {
         public static boolean allowUnicode() {
             return !CONFIG.getBoolean("config.chat.anti-unicode");
         }
+
+        /**
+         * Checks if sieving with scaffolding is allowed on the server.
+         *
+         * @return Whether sieving is allowed
+         */
+        public static boolean allowSieving() {
+            return CONFIG.getBoolean("config.custom.sieving");
+        }
+
+        /**
+         * Checks if naked killing is allowed on the server.
+         *
+         * @return Whether naked killing is allowed
+         */
+        public static boolean allowNakedKill() {
+            return !CONFIG.getBoolean("config.combat.anti-nakedkill");
+        }
     }
 
     public class MESSAGES {
