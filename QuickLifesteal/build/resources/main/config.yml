@@ -1,0 +1,19 @@
+#
+#
+# QuickLifeSteal is a simple and easy-to-use
+# life steal plugin for avg small Minecraft SMPs
+#
+# this Plugin was requested by TheTrouper
+# by ImproperIssues
+#
+config:
+  plugin:
+    prefix: "§bLife§3Steal §f>>"
+  gameplay:
+    max-hearts: 30 # max heart capacity, as integer
+    on-eliminate:
+      - "kick %player% %prefix% §cYou have been eeeeeeeeliminated!"
+      - "ban %player%"
+  messages:
+    kill-title-message: "§bKill! -> §f+ §c❤" # title display for kill, -> separates title and subtitle
+    death-title-message: "§cDeath! -> §4- §c❤" # title display for death, -> separates title and subtitle

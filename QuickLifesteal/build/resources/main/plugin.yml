@@ -1,0 +1,33 @@
+name: QuickLifesteal
+version: '0.0.1'
+main: me.improper.quicklifesteal.QuickLifesteal
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Quick and easy lifesteal plugin for your Minecraft Server.
+website: https://github.com/ItziSpyder
+permissions:
+  ls.cmd.reset:
+    description: Be able to reset a player's hearts data
+    default: op
+  ls.cmd.heal:
+    description: Be able to heal a player
+    default: op
+  ls.cmd.withdraw:
+    description: Be able to withdraw your own hearts
+commands:
+  lsreset:
+    description: Resets a player's heart data
+    usage: /lsreset <player>
+    permission: ls.cmd.reset
+  lsheal:
+    description: Heal a player
+    usage: /lsheal <player>
+    permission: ls.cmd.heal
+    aliases:
+      - heal
+  lswithdraw:
+    description: Withdraw your hearts
+    usage: /lswithdraw <amount>
+    permission: ls.cmd.withdraw
+    aliases:
+      - withdraw
