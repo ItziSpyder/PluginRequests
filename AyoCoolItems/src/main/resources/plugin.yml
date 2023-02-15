@@ -1,0 +1,65 @@
+name: AyoCoolItems
+version: '${project.version}'
+main: me.improperissues.ayocoolitems.Main
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: Ayo, cool items! (idk, just felt like adding custom items)
+website: github.com/itzispyder
+commands:
+  giveitem:
+    description: Give yourself custom items!
+    usage: §7/giveitem §8[§eitem§8] §d<amount> §b<player>
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  toggleoutline:
+    description: Block outline cosmetic!
+    usage: §7/toggleoutline
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  togglevectorhighlight:
+    description: Vector highlight cosmetic!
+    usage: §7/togglevectorhighlight
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  killall-uuid:
+    description: Kills all entities (existent or non-existent) through logged uuid!
+    usage: §7/killall-uuid
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  getall-uuid:
+    description: Gets all entities (existent or non-existent) through logged uuid!
+    usage: §7/getall-uuid
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  velocity:
+    description: Sets the velocity of a player!
+    usage: §7/velocity §b<player> §e<x> <y> <z>
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+    aliases:
+      - vel
+      - motion
+  reaction:
+    description: Test your reaction!
+    usage: §7/reaction
+  warp:
+    description: Warps to a location
+    usage: §7/warp
+  addwarp:
+    description: Saves a new warp
+    usage: §7/addwarp §b<name>
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  delwarp:
+    description: Deletes a warp
+    usage: §7/delwarp §b<name>
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  rgb-display:
+    description: RGB Display!
+    usage: §7/rgb-display
+    permission: aci.commands
+    permission-message: §8[§cACI§8] §4You do not have access to this!
+  spawn:
+    description: TP to spawn
+    usage: §7/spawn
