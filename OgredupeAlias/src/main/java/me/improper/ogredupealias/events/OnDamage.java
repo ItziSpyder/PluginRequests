@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.util.Vector;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -53,5 +55,15 @@ public class OnDamage implements Listener {
     private static boolean isNewbie(Player player) {
         String contents = Arrays.asList(player.getInventory().getArmorContents()).toString();
         return !contents.contains("NETHERITE") && !contents.contains("DIAMOND");
+    }
+
+    @EventHandler
+    public void onProjectileHit(ProjectileHitEvent e) {
+        Entity projectile = e.getEntity();
+        Entity victim = e.getHitEntity();
+
+        if (victim == null) return;
+
+        victim.setVelocity(victim.getVelocity().add(new Vector(0,4,0)));
     }
 }

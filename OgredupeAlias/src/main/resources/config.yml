@@ -37,6 +37,8 @@ config:
       - '/me'
       - '/say'
       - '/tp'
+      - '/tpa'
+      - '/tpahere'
   messages:
     swear: "§cPlease do not swear in chat!"
     spam: "§cPlease wait a moment before doing this again!"

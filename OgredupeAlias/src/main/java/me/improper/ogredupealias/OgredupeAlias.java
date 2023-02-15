@@ -2,6 +2,7 @@ package me.improper.ogredupealias;
 
 import me.improper.ogredupealias.commands.Commands;
 import me.improper.ogredupealias.commands.Tabs;
+import me.improper.ogredupealias.commands.tpa.TpCommands;
 import me.improper.ogredupealias.data.Config;
 import me.improper.ogredupealias.events.*;
 import me.improper.ogredupealias.items.Items;
@@ -56,6 +57,16 @@ public final class OgredupeAlias extends JavaPlugin {
         getCommand("message").setTabCompleter(new Tabs());
         getCommand("staffchat").setExecutor(new Commands());
         getCommand("staffchat").setTabCompleter(new Tabs());
+        getCommand("tpa").setExecutor(new TpCommands());
+        getCommand("tpa").setTabCompleter(new Tabs());
+        getCommand("tpahere").setExecutor(new TpCommands());
+        getCommand("tpahere").setTabCompleter(new Tabs());
+        getCommand("tpaccept").setExecutor(new TpCommands());
+        getCommand("tpaccept").setTabCompleter(new Tabs());
+        getCommand("tpcancel").setExecutor(new TpCommands());
+        getCommand("tpcancel").setTabCompleter(new Tabs());
+        getCommand("tpdeny").setExecutor(new TpCommands());
+        getCommand("tpdeny").setTabCompleter(new Tabs());
     }
 
     @Override

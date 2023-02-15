@@ -1,3 +1,9 @@
+/**
+ * I made this cuz Bukkit API sounds management is trash.
+ * by ImproperIssues
+ */
+
+
 package me.improper.ogredupealias.other;
 
 import me.improper.ogredupealias.OgredupeAlias;

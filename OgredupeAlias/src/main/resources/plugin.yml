@@ -15,6 +15,10 @@ permissions:
   ogredupealias.chat.staff:
     description: Permission to access staff chat.
     default: op
+  ogredupealias.commands.tpa:
+    description: Access to /tpa
+  ogredupealias.commands.tpahere:
+    description: Access to /tpahere
 commands:
   commandspy:
     description: "Be able to see players' commands."
@@ -50,3 +54,27 @@ commands:
     aliases:
       - schat
       - sc
+  tpa:
+    description: Send a tpa request
+    usage: /tpa <player>
+    permission: ogredupealias.commands.tpa
+    aliases:
+      - tpask
+  tpahere:
+    description: Send a tpahere request
+    usage: /tpahere <player>
+    permission: ogredupealias.commands.tpahere
+    aliases:
+      - tphere
+  tpdeny:
+    description: Deny a tp request
+    permission: ogredupealias.commands.tpa
+    usage: /tpdeny
+  tpcancel:
+    description: Cancel a tp request
+    permission: ogredupealias.commands.tpa
+    usage: /tpcancel
+  tpaccept:
+    description: Accept a tp request
+    permission: ogredupealias.commands.tpa
+    usage: /tpaccept
