@@ -1,0 +1,4 @@
+config:
+  player:
+    nonop_flight: false # Non-ops have access to /toggle flight?
+    nonop_flight_auto: false # Auto toggles flight on join

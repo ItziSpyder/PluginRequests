@@ -1,0 +1,33 @@
+name: FireArt
+version: '${version}'
+main: me.improperissues.fireart.FireArt
+api-version: 1.17
+authors: [ ImproperIssues ]
+description: An artistic paint brush! Literally!
+website: github.com/ItziSpyder
+commands:
+  givebrush:
+    description: Gives the paint brush that's used for painting areas of blocks!
+    usage: /givebrush
+    permission: fireart.givebrush
+  giveselector:
+    description: Gives the segment selector that selects a group of blocks!
+    usage: /giveselector
+  giveinspector:
+    description: Gives the segment inspector that checks what segment a selected block is from!
+    usage: /giveinspector
+  paintselector:
+    description: Opens the block selection menu for the paint brush
+    usage: /paintselector
+  segment:
+    description: Manages a segment!
+    usage: /segment [ settype | revert | save | delete | teleport ] <segment>
+    permission: fireart.segment
+    aliases:
+      - selection
+  artkit:
+    description: Spawns in the art kit but only for yourself
+    usage: /artkit
+  toggle:
+    description: Toggle for various player abilities
+    usage: /toggle <object>
